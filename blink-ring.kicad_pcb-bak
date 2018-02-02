@@ -1,14 +1,14 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.7-e2-6376~58~ubuntu14.04.1)
 
   (general
-    (links 36)
+    (links 37)
     (no_connects 3)
-    (area 54.626644 117.85 105.656823 159.233334)
+    (area 55.486676 128.033933 100.611734 152.76589)
     (thickness 1.6)
     (drawings 591)
-    (tracks 132)
+    (tracks 133)
     (zones 0)
-    (modules 42)
+    (modules 43)
     (nets 15)
   )
 
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.5)
     (user_trace_width 0.5)
     (trace_clearance 0.2)
     (zone_clearance 0.2)
@@ -130,7 +130,20 @@
     (add_net VCC)
   )
 
-  (module KiCad_Footprints:ZF_SMD_0805_CORD (layer F.Cu) (tedit 5A4AD360) (tstamp 5A4ADBA7)
+  (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8FE5) (tstamp 5A4A9F4E)
+    (at 97.490795 132.5007 314.5)
+    (path /5A438FDE)
+    (fp_text reference D8 (at 0 2.75 314.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value LED7 (at 0 -3 314.5) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 smd rect (at 0 0 314.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
+      (net 4 /LED_TOP_0))
+  )
+
+  (module KiCad_Footprints:ZF_SMD_0805_CORD (layer F.Cu) (tedit 5A73A295) (tstamp 5A4ADBA7)
     (at 98.5 134.5 120)
     (fp_text reference REF** (at 0 2.75 120) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -142,7 +155,7 @@
     (fp_line (start 1 -0.8) (end 1 0.8) (layer F.SilkS) (width 0.15))
     (fp_line (start 0.4 -0.8) (end 1 -0.8) (layer F.SilkS) (width 0.15))
     (pad 1 smd rect (at 0 0 120) (size 1.5 1.25) (layers F.Cu F.Paste F.Mask)
-      (net 4 /LED_TOP_0))
+      (net 5 /LED_TOP_1))
   )
 
   (module KiCad_Footprints:ZF_SMD_0805_CORD (layer F.Cu) (tedit 5921AD73) (tstamp 5A4ADAEC)
@@ -175,10 +188,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A9700) (tstamp 5A4AA63A)
     (at 58.51317 132.454836 45.5)
+    (path /5A435F01)
     (fp_text reference D1 (at 0 -2.75 45.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 45.5) (layer B.Fab) hide
+    (fp_text value LED0 (at 0 3 45.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 45.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -187,10 +201,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A9737) (tstamp 5A4AA636)
     (at 60.360654 130.958773 32.5)
+    (path /5A4367FE)
     (fp_text reference R6 (at 0 -2.75 32.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 32.5) (layer B.Fab) hide
+    (fp_text value LED1 (at 0 3 32.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 32.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -199,10 +214,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A9771) (tstamp 5A4AA632)
     (at 62.497328 129.916647 19.5)
+    (path /5A437665)
     (fp_text reference D3 (at 0 -2.75 19.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 19.5) (layer B.Fab) hide
+    (fp_text value LED2 (at 0 3 19.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 19.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -211,10 +227,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A9796) (tstamp 5A4AA62E)
     (at 64.813666 129.381881 6.5)
+    (path /5A43766B)
     (fp_text reference R8 (at 0 -2.75 6.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 6.5) (layer B.Fab) hide
+    (fp_text value LED3 (at 0 3 6.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 6.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -223,10 +240,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A97C3) (tstamp 5A4AA62A)
     (at 67.190933 129.381879 353.5)
+    (path /5A437FF7)
     (fp_text reference D5 (at 0 -2.75 353.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 353.5) (layer B.Fab) hide
+    (fp_text value LED4 (at 0 3 353.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 353.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -235,10 +253,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4A97EC) (tstamp 5A4AA626)
     (at 69.507271 129.916648 340.5)
+    (path /5A437FFD)
     (fp_text reference R10 (at 0 -2.75 340.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 340.5) (layer B.Fab) hide
+    (fp_text value LED5 (at 0 3 340.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 340.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -247,10 +266,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4AC7B6) (tstamp 5A4AA622)
     (at 71.643944 130.958773 327.5)
+    (path /5A438FD2)
     (fp_text reference D7 (at 0 -2.75 327.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 327.5) (layer B.Fab) hide
+    (fp_text value LED6 (at 0 3 327.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 327.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -259,10 +279,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8EF7) (tstamp 5A4A9F85)
     (at 82.512536 132.5007 45.5)
+    (path /5A42C253)
     (fp_text reference R5 (at 0 2.75 45.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 45.5) (layer F.Fab) hide
+    (fp_text value LED0 (at 0 -3 45.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 45.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -271,10 +292,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8F0B) (tstamp 5A4A9F81)
     (at 84.36002 131.004637 32.5)
+    (path /5A436804)
     (fp_text reference D2 (at 0 2.75 32.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 32.5) (layer F.Fab) hide
+    (fp_text value LED1 (at 0 -3 32.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 32.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -283,10 +305,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8F85) (tstamp 5A4A9F7D)
     (at 86.496693 129.962511 19.5)
+    (path /5A43765F)
     (fp_text reference R7 (at 0 2.75 19.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 19.5) (layer F.Fab) hide
+    (fp_text value LED2 (at 0 -3 19.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 19.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -295,10 +318,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8F9D) (tstamp 5A4A9F79)
     (at 88.813031 129.427743 6.5)
+    (path /5A437671)
     (fp_text reference D4 (at 0 2.75 6.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 6.5) (layer F.Fab) hide
+    (fp_text value LED3 (at 0 -3 6.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 6.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -307,10 +331,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8FB4) (tstamp 5A4A9F75)
     (at 91.190299 129.427743 353.5)
+    (path /5A437FF1)
     (fp_text reference R9 (at 0 2.75 353.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 353.5) (layer F.Fab) hide
+    (fp_text value LED4 (at 0 -3 353.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 353.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -319,10 +344,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8FC5) (tstamp 5A4A9F71)
     (at 93.506637 129.962513 340.5)
+    (path /5A438003)
     (fp_text reference D6 (at 0 2.75 340.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 340.5) (layer F.Fab) hide
+    (fp_text value LED5 (at 0 -3 340.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 340.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -331,10 +357,11 @@
 
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8FD7) (tstamp 5A4A9F6D)
     (at 95.643311 131.004637 327.5)
+    (path /5A438FCC)
     (fp_text reference R11 (at 0 2.75 327.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 327.5) (layer F.Fab) hide
+    (fp_text value LED6 (at 0 -3 327.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0 327.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
@@ -402,20 +429,6 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-  )
-
-  (module KiCad_Footprints:ZF_CONN_1-2_pad (layer F.Cu) (tedit 59D522F4) (tstamp 5A42C816)
-    (at 62.19 150.365)
-    (path /5A432B82)
-    (attr smd)
-    (fp_text reference TP1 (at 0 1.5) (layer Cmts.User)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value RESET (at 0 -1.6) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 smd circle (at 0 0) (size 1.2 1.2) (layers F.Cu)
-      (net 14 "Net-(TP1-Pad1)"))
   )
 
   (module KiCad_Footprints:ZF_SMD_0805_CORD (layer F.Cu) (tedit 5921AD73) (tstamp 5A42C7C4)
@@ -579,24 +592,13 @@
       (net 7 "Net-(NA1-Pad1)"))
   )
 
-  (module KiCad_Footprints:ZF_SMD_0508_CORD (layer F.Cu) (tedit 5A4A8FE5) (tstamp 5A4A9F4E)
-    (at 97.490795 132.5007 314.5)
-    (fp_text reference D8 (at 0 2.75 314.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value ZF_SMD_0805_CORD (at 0 -3 314.5) (layer F.Fab) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 smd rect (at 0 0 314.5) (size 1 2.5) (layers F.Cu F.Paste F.Mask)
-      (net 4 /LED_TOP_0))
-  )
-
   (module KiCad_Footprints:ZF_SMD_0508_CORD (layer B.Cu) (tedit 5A4AC7BA) (tstamp 5A4AA620)
     (at 73.491429 132.454837 314.5)
+    (path /5A438FD8)
     (fp_text reference R12 (at 0 -2.75 314.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value ZF_SMD_0805_CORD (at 0 3 314.5) (layer B.Fab) hide
+    (fp_text value LED7 (at 0 3 314.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (pad 1 smd rect (at 0 0 314.5) (size 1 2.5) (layers B.Cu B.Paste B.Mask)
@@ -744,6 +746,34 @@
     )
     (pad 1 smd circle (at 0 0) (size 1.2 1.2) (layers B.Cu B.Mask)
       (net 1 VCC))
+  )
+
+  (module KiCad_Footprints:ZF_CONN_1-2_pad (layer F.Cu) (tedit 5A4AD501) (tstamp 5A42C816)
+    (at 62.19 150.365)
+    (path /5A432B82)
+    (attr smd)
+    (fp_text reference TP1 (at 0 1.5) (layer Cmts.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value RESET (at 0 -1.6) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 smd circle (at 0 0) (size 1.2 1.2) (layers F.Cu F.Mask)
+      (net 14 "Net-(TP1-Pad1)"))
+  )
+
+  (module KiCad_Footprints:ZF_CONN_1-2_pad (layer F.Cu) (tedit 5A4AD501) (tstamp 5A73A284)
+    (at 78.049205 162.76589)
+    (path /5A42F49D)
+    (attr smd)
+    (fp_text reference TP6 (at 0 1.5) (layer Cmts.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value GND (at 0 -1.6) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 smd circle (at 0 0) (size 1.2 1.2) (layers F.Cu F.Mask)
+      (net 2 GND))
   )
 
   (gr_text + (at 57.5 151) (layer F.Cu)
@@ -1410,6 +1440,7 @@
   (segment (start 97.49 132.5) (end 97.490795 132.5007) (width 0.5) (layer F.Cu) (net 4) (tstamp 5A4AC810))
   (segment (start 82.512536 132.5007) (end 84.37 131) (width 0.5) (layer F.Cu) (net 4) (tstamp 5A4AC7EB))
   (segment (start 84.37 131) (end 84.36002 131.004637) (width 0.5) (layer F.Cu) (net 4) (tstamp 5A4AC7EF))
+  (segment (start 98.5 133.6) (end 98.5 134.5) (width 0.5) (layer F.Cu) (net 5))
   (segment (start 94.835001 149.464999) (end 99.1 145.2) (width 0.2) (layer B.Cu) (net 5))
   (segment (start 99.1 145.2) (end 99.1 144.2) (width 0.2) (layer B.Cu) (net 5))
   (via (at 99.1 144.2) (size 0.6) (drill 0.4) (layers F.Cu B.Cu) (net 5))
@@ -1588,26 +1619,33 @@
     )
     (filled_polygon
       (pts
-        (xy 99.479964 135.234068) (xy 99.592751 135.671048) (xy 99.701304 136.126551) (xy 99.803929 136.598798) (xy 99.898885 137.085782)
-        (xy 99.984448 137.585533) (xy 100.058901 138.096134) (xy 100.12054 138.615625) (xy 100.167673 139.142065) (xy 100.198604 139.673384)
-        (xy 100.211681 140.207703) (xy 100.205237 140.743053) (xy 100.177653 141.27745) (xy 100.127326 141.808906) (xy 100.052668 142.335577)
-        (xy 99.952139 142.855455) (xy 99.824192 143.366759) (xy 99.667311 143.867638) (xy 99.479966 144.356382) (xy 99.329181 144.682867)
-        (xy 98.551575 144.399841) (xy 98.70763 144.095147) (xy 98.709869 144.089468) (xy 98.71299 144.084218) (xy 98.715034 144.079779)
-        (xy 98.901275 143.667825) (xy 98.90325 143.662) (xy 98.906133 143.656559) (xy 98.907957 143.652025) (xy 99.074476 143.229695)
-        (xy 99.076177 143.223732) (xy 99.078809 143.218111) (xy 99.080408 143.213493) (xy 99.226619 142.781376) (xy 99.228036 142.775285)
-        (xy 99.230403 142.769499) (xy 99.231771 142.764807) (xy 99.357092 142.323488) (xy 99.358214 142.317287) (xy 99.360306 142.311344)
-        (xy 99.361439 142.30659) (xy 99.465286 141.856648) (xy 99.466103 141.850356) (xy 99.467908 141.844271) (xy 99.4688 141.839466)
-        (xy 99.550585 141.381491) (xy 99.551089 141.375128) (xy 99.552594 141.368925) (xy 99.553244 141.364081) (xy 99.612386 140.898653)
-        (xy 99.61257 140.892243) (xy 99.613766 140.885941) (xy 99.614171 140.881071) (xy 99.650083 140.408776) (xy 99.649943 140.402347)
-        (xy 99.650821 140.395974) (xy 99.650979 140.391089) (xy 99.663086 139.912515) (xy 99.662621 139.906107) (xy 99.663176 139.899698)
-        (xy 99.663086 139.894811) (xy 99.650979 139.416236) (xy 99.65019 139.409853) (xy 99.65042 139.403425) (xy 99.650083 139.398549)
-        (xy 99.614171 138.926254) (xy 99.613062 138.919933) (xy 99.612968 138.913524) (xy 99.612386 138.908671) (xy 99.553244 138.443245)
-        (xy 99.551826 138.437024) (xy 99.551411 138.430652) (xy 99.550585 138.425836) (xy 99.4688 137.967859) (xy 99.467081 137.961755)
-        (xy 99.466352 137.955447) (xy 99.465286 137.950677) (xy 99.361439 137.500736) (xy 99.359428 137.49476) (xy 99.358394 137.488549)
-        (xy 99.357092 137.483838) (xy 99.231771 137.042519) (xy 99.229485 137.036701) (xy 99.228153 137.03059) (xy 99.226619 137.02595)
-        (xy 99.080408 136.593833) (xy 99.077855 136.588177) (xy 99.076237 136.582189) (xy 99.074476 136.577631) (xy 98.907957 136.155301)
-        (xy 98.905153 136.149827) (xy 98.903258 136.143968) (xy 98.901275 136.139501) (xy 98.715034 135.727547) (xy 98.71199 135.722259)
-        (xy 98.709828 135.716544) (xy 98.70763 135.712179) (xy 98.661009 135.621152) (xy 99.459503 135.160141)
+        (xy 98.635438 132.640873) (xy 98.719116 132.859403) (xy 98.812517 133.111868) (xy 98.895277 133.344122) (xy 98.872336 133.317963)
+        (xy 98.825453 133.281988) (xy 98.772452 133.255851) (xy 98.715371 133.240556) (xy 98.656404 133.236691) (xy 98.597814 133.244404)
+        (xy 98.541855 133.263399) (xy 98.490677 133.292947) (xy 98.083253 133.528173) (xy 98.055801 133.630625) (xy 98.518301 134.431699)
+        (xy 98.535622 134.421699) (xy 98.585622 134.508301) (xy 98.568301 134.518301) (xy 99.030801 135.319375) (xy 99.133253 135.346827)
+        (xy 99.459103 135.158697) (xy 99.479964 135.234068) (xy 99.592751 135.671048) (xy 99.701304 136.126551) (xy 99.803929 136.598798)
+        (xy 99.898885 137.085782) (xy 99.984448 137.585533) (xy 100.058901 138.096134) (xy 100.12054 138.615625) (xy 100.167673 139.142065)
+        (xy 100.198604 139.673384) (xy 100.211681 140.207703) (xy 100.205237 140.743053) (xy 100.177653 141.27745) (xy 100.127326 141.808906)
+        (xy 100.052668 142.335577) (xy 99.952139 142.855455) (xy 99.824192 143.366759) (xy 99.667311 143.867638) (xy 99.479966 144.356382)
+        (xy 99.329181 144.682867) (xy 98.551575 144.399841) (xy 98.70763 144.095147) (xy 98.709869 144.089468) (xy 98.71299 144.084218)
+        (xy 98.715034 144.079779) (xy 98.901275 143.667825) (xy 98.90325 143.662) (xy 98.906133 143.656559) (xy 98.907957 143.652025)
+        (xy 99.074476 143.229695) (xy 99.076177 143.223732) (xy 99.078809 143.218111) (xy 99.080408 143.213493) (xy 99.226619 142.781376)
+        (xy 99.228036 142.775285) (xy 99.230403 142.769499) (xy 99.231771 142.764807) (xy 99.357092 142.323488) (xy 99.358214 142.317287)
+        (xy 99.360306 142.311344) (xy 99.361439 142.30659) (xy 99.465286 141.856648) (xy 99.466103 141.850356) (xy 99.467908 141.844271)
+        (xy 99.4688 141.839466) (xy 99.550585 141.381491) (xy 99.551089 141.375128) (xy 99.552594 141.368925) (xy 99.553244 141.364081)
+        (xy 99.612386 140.898653) (xy 99.61257 140.892243) (xy 99.613766 140.885941) (xy 99.614171 140.881071) (xy 99.650083 140.408776)
+        (xy 99.649943 140.402347) (xy 99.650821 140.395974) (xy 99.650979 140.391089) (xy 99.663086 139.912515) (xy 99.662621 139.906107)
+        (xy 99.663176 139.899698) (xy 99.663086 139.894811) (xy 99.650979 139.416236) (xy 99.65019 139.409853) (xy 99.65042 139.403425)
+        (xy 99.650083 139.398549) (xy 99.614171 138.926254) (xy 99.613062 138.919933) (xy 99.612968 138.913524) (xy 99.612386 138.908671)
+        (xy 99.553244 138.443245) (xy 99.551826 138.437024) (xy 99.551411 138.430652) (xy 99.550585 138.425836) (xy 99.4688 137.967859)
+        (xy 99.467081 137.961755) (xy 99.466352 137.955447) (xy 99.465286 137.950677) (xy 99.361439 137.500736) (xy 99.359428 137.49476)
+        (xy 99.358394 137.488549) (xy 99.357092 137.483838) (xy 99.231771 137.042519) (xy 99.229485 137.036701) (xy 99.228153 137.03059)
+        (xy 99.226619 137.02595) (xy 99.080408 136.593833) (xy 99.077855 136.588177) (xy 99.076237 136.582189) (xy 99.074476 136.577631)
+        (xy 98.907957 136.155301) (xy 98.905153 136.149827) (xy 98.903258 136.143968) (xy 98.901275 136.139501) (xy 98.715034 135.727547)
+        (xy 98.71199 135.722259) (xy 98.709828 135.716544) (xy 98.70763 135.712179) (xy 98.660347 135.61986) (xy 98.916747 135.471827)
+        (xy 98.944199 135.369375) (xy 98.481699 134.568301) (xy 98.464378 134.578301) (xy 98.414378 134.491699) (xy 98.431699 134.481699)
+        (xy 97.969199 133.680625) (xy 97.866747 133.653173) (xy 97.5261 133.849846) (xy 97.464719 133.771738) (xy 97.460611 133.767449)
+        (xy 97.457247 133.762554) (xy 97.454073 133.758838) (xy 97.408034 133.705689) (xy 98.595197 132.539068)
       )
     )
   )
