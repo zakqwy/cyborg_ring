@@ -5,6 +5,7 @@ cyborg ring is a cordwood-style bit of blinky jewelry powered by an ATtiny85 and
 cyborg ring is released under the terms of the Creative Commons Attribution-ShareAlike 4.0 license, available here: http://creativecommons.org/licenses/by-sa/4.0/.
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 ## project status
+![cyborg ring rear view](/cyborg_ring_back.jpg)
 The ring works and seems to last at least a few weeks without breaking. but at this point, the project is very much in alpha as I have not had time to put together detailed build or programming instructions. By popular demand, I'll probably put together a CrowdSupply campaign for kits that will include good instructions, pre-programmed microcontrollers, and LED color / ring size choice. On the subject of size, this version is nominally equivalent to ring size 9. Practically, it's better as a 7 or 8 as the bare FR4 is a bit rough when worn too tight. 
 ## build instructions
 - Use a service like OSHpark (or any other high-quality PCB vendor) to fabricate the boards. They should be routed, 0.8mm (1/32"), ENIG, double-sided, FR4. Note that some of the traces are a bit close to the PCB edge so you may need to try a few services or have your bodge wires handy. 
@@ -14,3 +15,4 @@ The ring works and seems to last at least a few weeks without breaking. but at t
 - Program the ATTiny85 (or -45, or -25) using the six pads and a suitable AVR programmer, such as the USBtinyISP from Adafruit. On the side of the ring with the tiny pushbutton switch, the left pad is RESET and the right pad is GND; on the side opposite the switch, the pads are (left to right) VCC, SCK, MISO, and MOSI.The code in the FIRMWARE directory keeps the microcontroller sleeping until the switch is pressed, at which point the LEDs flash three times. 
 - If desired, coat all the exposed bits (other than battery terminals and switch with silicone modified conformal coating. The board won't be waterproof but this will at least help protect stuff a bit.
 - Show me your builds, either via the Hackaday site or by tweet (@zakqwy). I'd love to see some cyborg rings in the wild.  
+![cyborg ring gif](/cyborg_ring.gif)
