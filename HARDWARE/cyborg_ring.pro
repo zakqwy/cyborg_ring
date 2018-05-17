@@ -1,4 +1,4 @@
-update=Tue 16 Jan 2018 01:16:17 PM CST
+update=Thu 17 May 2018 02:11:13 PM CDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,7 +61,12 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-LibName33=schematic_lib/NeuroTinker_schematic_symbols
+LibName33=schematic_symbols/sw_push
+LibName34=schematic_symbols/passive_cordwood_x2
+LibName35=schematic_symbols/passive_cordwood
+LibName36=schematic_symbols/led-res_cordwood
+LibName37=schematic_symbols/attiny85_qfn20_11-15
+LibName38=schematic_symbols/attiny85_qfn20_1-5
 [schematic_editor]
 version=1
 PageLayoutDescrFile=

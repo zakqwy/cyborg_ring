@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Passive_cordwood
+#
+DEF Passive_cordwood NA 0 40 Y Y 1 F N
+F0 "NA" 0 -125 60 H V C CNN
+F1 "Passive_cordwood" 0 125 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+P 4 0 1 0 0 50 -100 50 -100 -50 0 -50 N
+P 4 0 1 0 0 50 -25 25 25 -25 0 -50 N
+X ~ 1 -300 0 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

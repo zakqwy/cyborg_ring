@@ -55,7 +55,8 @@ void SystemInit(void) {
 	TCCR0B |= ((1<<CS02) | (1<<CS00)); //clk/1024
 	OCR0A = 30; //sets tick to ~1ms
 	TIMSK |= (1<<OCIE0A); //output compare match 0A interrupt enable
-
+	GIMSK |= (1<<PCIE); //pin change interrupt enable
+	PCMSK |= (1<<PCINT1);
 	sei();
 }
 

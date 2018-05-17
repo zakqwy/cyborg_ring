@@ -31,18 +31,22 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:NeuroTinker_schematic_symbols
-LIBS:blink-ring-cache
+LIBS:sw_push
+LIBS:passive_cordwood_x2
+LIBS:passive_cordwood
+LIBS:led-res_cordwood
+LIBS:attiny85_qfn20_11-15
+LIBS:attiny85_qfn20_1-5
 EELAYER 25 0
 EELAYER END
-$Descr A3 16535 11693
+$Descr USLedger 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "blink-ring"
-Date "2017-12-26"
-Rev "A"
+Date "2018-05-17"
+Rev "C"
 Comp ""
-Comment1 "MIT license"
+Comment1 "License: CC-BY-SA 4.0"
 Comment2 "(c) copyright 2017 zach fredin"
 Comment3 ""
 Comment4 ""
@@ -106,14 +110,6 @@ F 3 "" H 5150 5300 50  0001 C CNN
 	1    5150 5300
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 4050 4950 4050
-Wire Wire Line
-	5150 3850 5150 4250
-Wire Wire Line
-	5150 4550 5150 5300
-Wire Wire Line
-	5500 4750 4950 4750
 $Comp
 L VCC #PWR03
 U 1 1 5A42D805
@@ -136,17 +132,15 @@ F 3 "" H 5400 2650 50  0001 C CNN
 	1    5400 2650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5400 2650 5200 2650
 $Comp
 L TEST TP3
 U 1 1 5A42DC11
-P 5600 2950
-F 0 "TP3" H 5600 3250 50  0000 C BNN
-F 1 "MISO" H 5600 3200 50  0000 C CNN
-F 2 "KiCad_Footprints:ZF_CONN_1-2_pad" H 5600 2950 50  0001 C CNN
-F 3 "" H 5600 2950 50  0001 C CNN
-	1    5600 2950
+P 6300 2950
+F 0 "TP3" H 6300 3250 50  0000 C BNN
+F 1 "MISO" H 6300 3200 50  0000 C CNN
+F 2 "KiCad_Footprints:ZF_CONN_1-2_pad" H 6300 2950 50  0001 C CNN
+F 3 "" H 6300 2950 50  0001 C CNN
+	1    6300 2950
 	0    1    1    0   
 $EndComp
 $Comp
@@ -160,10 +154,6 @@ F 3 "" H 5400 3100 50  0001 C CNN
 	1    5400 3100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5400 3100 5200 3100
-Wire Wire Line
-	5200 2950 5600 2950
 $Comp
 L TEST TP5
 U 1 1 5A42F2C2
@@ -175,9 +165,6 @@ F 3 "" H 5500 3850 50  0001 C CNN
 	1    5500 3850
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 3850 5500 4050
-Connection ~ 5150 4050
 $Comp
 L TEST TP6
 U 1 1 5A42F49D
@@ -189,13 +176,6 @@ F 3 "" H 5500 4550 50  0001 C CNN
 	1    5500 4550
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 4750 5500 4550
-Connection ~ 5150 4750
-Wire Wire Line
-	5600 1150 5600 2500
-Wire Wire Line
-	5600 2500 5200 2500
 $Comp
 L Passive_cordwood R2
 U 1 1 5A430319
@@ -240,39 +220,6 @@ F 3 "" H 3100 4750 60  0001 C CNN
 	1    3100 4750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 4050 2600 4050
-Wire Wire Line
-	2600 4050 2600 4200
-$Comp
-L SW_SPDT SW1
-U 1 1 5A430BC6
-P 2600 4400
-F 0 "SW1" H 2600 4570 50  0000 C CNN
-F 1 "SW_SPDT" H 2600 4200 50  0000 C CNN
-F 2 "KiCad_Footprints:ZF_SW_PCM12SMTR" H 2600 4400 50  0001 C CNN
-F 3 "" H 2600 4400 50  0001 C CNN
-	1    2600 4400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2800 4750 2700 4750
-Wire Wire Line
-	2700 4750 2700 4600
-$Comp
-L Passive_cordwood_x2 NA2
-U 1 1 5A43122D
-P 4900 1700
-F 0 "NA2" H 4900 1575 60  0000 C CNN
-F 1 "RST_PULLUP" H 4900 1825 60  0000 C CNN
-F 2 "KiCad_Footprints:ZF_SMD_0805_CORD" H 4900 1700 60  0001 C CNN
-F 3 "" H 4900 1700 60  0001 C CNN
-	1    4900 1700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5200 1700 5600 1700
-Connection ~ 5600 1700
 $Comp
 L C C1
 U 1 1 5A432063
@@ -285,23 +232,6 @@ F 3 "" H 5150 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Passive_cordwood_x2 NA1
-U 1 1 5A432159
-P 2900 1700
-F 0 "NA1" H 2900 1575 60  0000 C CNN
-F 1 "RST_PULLUP" H 2900 1825 60  0000 C CNN
-F 2 "KiCad_Footprints:ZF_SMD_0805_CORD" H 2900 1700 60  0001 C CNN
-F 3 "" H 2900 1700 60  0001 C CNN
-	1    2900 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1700 2300 1700
-Wire Wire Line
-	2300 1700 2300 2500
-Wire Wire Line
-	2000 2500 2550 2500
-$Comp
 L TEST TP1
 U 1 1 5A432B82
 P 2000 2500
@@ -312,45 +242,25 @@ F 3 "" H 2000 2500 50  0001 C CNN
 	1    2000 2500
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2300 2500
 Text Label 2300 2650 2    60   ~ 0
 LED_BOTTOM_0
-Wire Wire Line
-	2300 2650 2550 2650
 Text Label 2300 3100 2    60   ~ 0
 LED_BOTTOM_1
-Wire Wire Line
-	2300 3100 2550 3100
 Text Label 5550 3300 0    60   ~ 0
 LED_TOP_1
-Wire Wire Line
-	5550 3300 5300 3300
-Wire Wire Line
-	5300 3300 5300 3100
-Connection ~ 5300 3100
 Text Label 5550 2800 0    60   ~ 0
 LED_TOP_0
-Wire Wire Line
-	5550 2800 5300 2800
-Wire Wire Line
-	5300 2800 5300 2650
-Connection ~ 5300 2650
-Wire Wire Line
-	4950 5100 5150 5100
-Connection ~ 5150 5100
 $Comp
 L TEST TP7
 U 1 1 5A433B99
-P 2600 5100
-F 0 "TP7" H 2600 5400 50  0000 C BNN
-F 1 "GND" H 2600 5350 50  0000 C CNN
-F 2 "KiCad_Footprints:ZF_CONN_1-2_pad" H 2600 5100 50  0001 C CNN
-F 3 "" H 2600 5100 50  0001 C CNN
-	1    2600 5100
-	0    -1   1    0   
+P 2100 4900
+F 0 "TP7" H 2100 5200 50  0000 C BNN
+F 1 "GND" H 2100 5150 50  0000 C CNN
+F 2 "KiCad_Footprints:ZF_CONN_1-2_pad" H 2100 4900 50  0001 C CNN
+F 3 "" H 2100 4900 50  0001 C CNN
+	1    2100 4900
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2600 5100 2800 5100
 $Comp
 L Passive_cordwood_x2 NA3
 U 1 1 5A433F51
@@ -373,8 +283,6 @@ F 3 "" H 4650 5100 60  0001 C CNN
 	1    4650 5100
 	-1   0    0    1   
 $EndComp
-Wire Notes Line
-	3800 11200 3850 11200
 $Comp
 L LED-RES_cordwood D1
 U 1 1 5A435F01
@@ -408,18 +316,6 @@ F 3 "" H 4050 6400 60  0001 C CNN
 	1    4050 6400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 5900 3000 5900
-Wire Wire Line
-	3000 5900 3000 6400
-Wire Wire Line
-	4500 6400 4500 5900
-Wire Wire Line
-	4500 5900 4300 5900
-Wire Wire Line
-	4350 6400 4500 6400
-Wire Wire Line
-	3000 6400 3250 6400
 $Comp
 L Passive_cordwood R7
 U 1 1 5A43765F
@@ -464,26 +360,6 @@ F 3 "" H 4050 7400 60  0001 C CNN
 	1    4050 7400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 6900 3000 6900
-Wire Wire Line
-	3000 6900 3000 7400
-Wire Wire Line
-	4500 7400 4500 6900
-Wire Wire Line
-	4500 6900 4300 6900
-Wire Wire Line
-	4350 7400 4500 7400
-Wire Wire Line
-	3000 7400 3250 7400
-Wire Wire Line
-	3000 7150 2800 7150
-Wire Wire Line
-	2800 7150 2800 6150
-Wire Wire Line
-	2800 6150 3000 6150
-Connection ~ 3000 6150
-Connection ~ 3000 7150
 $Comp
 L Passive_cordwood R9
 U 1 1 5A437FF1
@@ -528,26 +404,6 @@ F 3 "" H 4050 8400 60  0001 C CNN
 	1    4050 8400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 7900 3000 7900
-Wire Wire Line
-	3000 7900 3000 8400
-Wire Wire Line
-	4500 8400 4500 7900
-Wire Wire Line
-	4500 7900 4300 7900
-Wire Wire Line
-	4350 8400 4500 8400
-Wire Wire Line
-	3000 8400 3250 8400
-Wire Wire Line
-	4500 8150 4700 8150
-Wire Wire Line
-	4700 8150 4700 7150
-Wire Wire Line
-	4700 7150 4500 7150
-Connection ~ 4500 7150
-Connection ~ 4500 8150
 $Comp
 L Passive_cordwood R11
 U 1 1 5A438FCC
@@ -592,6 +448,117 @@ F 3 "" H 4050 9400 60  0001 C CNN
 	1    4050 9400
 	1    0    0    -1  
 $EndComp
+Text Label 2600 6700 2    60   ~ 0
+LED_BOTTOM_0
+Text Label 2600 8700 2    60   ~ 0
+LED_BOTTOM_1
+Text Label 5100 6700 0    60   ~ 0
+LED_TOP_0
+Text Label 5100 7650 0    60   ~ 0
+LED_TOP_1
+Wire Wire Line
+	5500 4050 4950 4050
+Wire Wire Line
+	5150 3850 5150 4250
+Wire Wire Line
+	5150 4550 5150 5300
+Wire Wire Line
+	5500 4750 4950 4750
+Wire Wire Line
+	5400 2650 5200 2650
+Wire Wire Line
+	5400 3100 5200 3100
+Wire Wire Line
+	5200 2950 6300 2950
+Wire Wire Line
+	5500 3850 5500 4050
+Connection ~ 5150 4050
+Wire Wire Line
+	5500 4750 5500 4550
+Connection ~ 5150 4750
+Wire Wire Line
+	5600 1150 5600 2500
+Wire Wire Line
+	5600 2500 5200 2500
+Wire Wire Line
+	2700 4750 2800 4750
+Wire Wire Line
+	2700 4050 2700 4750
+Wire Wire Line
+	2000 2500 2550 2500
+Wire Wire Line
+	2300 2650 2550 2650
+Wire Wire Line
+	2300 3100 2550 3100
+Wire Wire Line
+	5550 3300 5300 3300
+Wire Wire Line
+	5300 3300 5300 3100
+Connection ~ 5300 3100
+Wire Wire Line
+	5550 2800 5300 2800
+Wire Wire Line
+	5300 2800 5300 2650
+Connection ~ 5300 2650
+Wire Wire Line
+	4950 5100 5150 5100
+Connection ~ 5150 5100
+Wire Wire Line
+	1400 5100 2800 5100
+Wire Notes Line
+	3800 11200 3850 11200
+Wire Wire Line
+	3200 5900 3000 5900
+Wire Wire Line
+	3000 5900 3000 6400
+Wire Wire Line
+	4500 6400 4500 5900
+Wire Wire Line
+	4500 5900 4300 5900
+Wire Wire Line
+	4350 6400 4500 6400
+Wire Wire Line
+	3000 6400 3250 6400
+Wire Wire Line
+	3200 6900 3000 6900
+Wire Wire Line
+	3000 6900 3000 7400
+Wire Wire Line
+	4500 7400 4500 6900
+Wire Wire Line
+	4500 6900 4300 6900
+Wire Wire Line
+	4350 7400 4500 7400
+Wire Wire Line
+	3000 7400 3250 7400
+Wire Wire Line
+	3000 7150 2800 7150
+Wire Wire Line
+	2800 7150 2800 6150
+Wire Wire Line
+	2800 6150 3000 6150
+Connection ~ 3000 6150
+Connection ~ 3000 7150
+Wire Wire Line
+	3200 7900 3000 7900
+Wire Wire Line
+	3000 7900 3000 8400
+Wire Wire Line
+	4500 8400 4500 7900
+Wire Wire Line
+	4500 7900 4300 7900
+Wire Wire Line
+	4350 8400 4500 8400
+Wire Wire Line
+	3000 8400 3250 8400
+Wire Wire Line
+	4500 8150 4700 8150
+Wire Wire Line
+	4700 8150 4700 7150
+Wire Wire Line
+	4700 7150 4500 7150
+Connection ~ 4500 7150
+Connection ~ 4500 8150
 Wire Wire Line
 	3200 8900 3000 8900
 Wire Wire Line
@@ -620,26 +587,69 @@ Wire Wire Line
 	4900 6150 4500 6150
 Connection ~ 4500 6150
 Connection ~ 4500 9150
-Text Label 2600 6700 2    60   ~ 0
-LED_BOTTOM_0
 Wire Wire Line
 	2600 6700 2800 6700
 Connection ~ 2800 6700
-Text Label 2600 8700 2    60   ~ 0
-LED_BOTTOM_1
 Wire Wire Line
 	2600 8700 2800 8700
 Connection ~ 2800 8700
-Text Label 5100 6700 0    60   ~ 0
-LED_TOP_0
 Wire Wire Line
 	5100 6700 4900 6700
 Connection ~ 4900 6700
-Text Label 5100 7650 0    60   ~ 0
-LED_TOP_1
 Wire Wire Line
 	5100 7650 4700 7650
 Connection ~ 4700 7650
 Wire Notes Line
 	3800 10700 3800 500 
+Wire Wire Line
+	2800 4050 2700 4050
+$Comp
+L Passive_cordwood_x2 NA2
+U 1 1 5A43122D
+P 4900 1700
+F 0 "NA2" H 4900 1575 60  0000 C CNN
+F 1 "SW_JMP" H 4900 1825 60  0000 C CNN
+F 2 "KiCad_Footprints:ZF_SMD_0805_CORD" H 4900 1700 60  0001 C CNN
+F 3 "" H 4900 1700 60  0001 C CNN
+	1    4900 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2600 1700 2300 1700
+$Comp
+L Passive_cordwood_x2 NA1
+U 1 1 5A432159
+P 2900 1700
+F 0 "NA1" H 2900 1575 60  0000 C CNN
+F 1 "SW_JMP" H 2900 1825 60  0000 C CNN
+F 2 "KiCad_Footprints:ZF_SMD_0805_CORD" H 2900 1700 60  0001 C CNN
+F 3 "" H 2900 1700 60  0001 C CNN
+	1    2900 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1700 6150 1700
+Wire Wire Line
+	6150 1700 6150 2950
+Connection ~ 6150 2950
+$Comp
+L SW_PUSH SW1
+U 1 1 5A4A7E66
+P 2000 1700
+F 0 "SW1" H 2150 1810 50  0000 C CNN
+F 1 "SW_PUSH" H 2000 1620 50  0000 C CNN
+F 2 "KiCad_Footprints:ZF_SW_B3U" H 2000 1700 50  0001 C CNN
+F 3 "" H 2000 1700 50  0000 C CNN
+F 4 "No" H 2000 1700 60  0001 C CNN "Subs Allowed"
+F 5 "Yes" H 2000 1700 60  0001 C CNN "RoHS"
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1700 1400 5100
+Wire Wire Line
+	1400 1700 1700 1700
+Wire Wire Line
+	2100 4900 2100 5100
+Connection ~ 2100 5100
 $EndSCHEMATC

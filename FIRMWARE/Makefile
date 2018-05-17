@@ -1,7 +1,7 @@
 # Derived from AVR Crosspack template
 #
 
-DEVICE     = attiny85           # See avr-help for all possible devices
+DEVICE     = attiny25           # See avr-help for all possible devices
 CLOCK      = 8000000            # 8Mhz
 PROGRAMMER = -c usbtiny -P usb  # For using Adafruit USBtiny
 OBJECTS    = main.o HAL.o       # Add more objects for each .c file here
