@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/zach/Documents/cyborg_ring/HARDWARE/cyborg_ring.sch</source>
-    <date>Thu 17 May 2018 02:45:49 PM CDT</date>
+    <date>Thu 24 May 2018 09:12:32 AM CDT</date>
     <tool>Eeschema 4.0.7-e2-6376~58~ubuntu14.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -19,23 +19,45 @@
     </sheet>
   </design>
   <components>
-    <comp ref="U1">
+    <comp ref="BOT_U1">
       <value>ATtiny85_QFN20_1-5</value>
       <footprint>KiCad_Footprints:ZF_IC_MLF20-050_CORD_1-5</footprint>
+      <fields>
+        <field name="Mfr">Atmel/Microchip</field>
+        <field name="Mfr Part #">ATTINY85-20MUR </field>
+        <field name="Package">QFN20-0.5</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="attiny85_qfn20_1-5" part="ATtiny85_QFN20_1-5"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A42C0B8</tstamp>
     </comp>
-    <comp ref="U2">
+    <comp ref="TOP_U1">
       <value>ATtiny85_QFN20_11-15</value>
       <footprint>KiCad_Footprints:ZF_IC_MLF20-050_CORD_11-15</footprint>
+      <fields>
+        <field name="Mfr">Atmel/Microchip</field>
+        <field name="Mfr Part #">ATTINY85-20MUR </field>
+        <field name="Package">QFN20-0.5</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="attiny85_qfn20_11-15" part="ATtiny85_QFN20_11-15"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A42C151</tstamp>
     </comp>
-    <comp ref="R5">
-      <value>LED0</value>
+    <comp ref="TOP_D1">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A42C253</tstamp>
@@ -75,37 +97,68 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A42F49D</tstamp>
     </comp>
-    <comp ref="R2">
+    <comp ref="TOP_PAD1">
       <value>BATT0+</value>
       <footprint>KiCad_Footprints:ZF_BATT_AC10E_POS</footprint>
+      <fields>
+        <field name="Package">ENIG pad</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A430319</tstamp>
     </comp>
-    <comp ref="R4">
+    <comp ref="TOP_PAD2">
       <value>BATT1-</value>
       <footprint>KiCad_Footprints:ZF_BATT_AC10E_NEG</footprint>
+      <fields>
+        <field name="Mfr">TE Connectivity</field>
+        <field name="Mfr Part #">1447360-8</field>
+        <field name="Package">SMT</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A4303EE</tstamp>
     </comp>
-    <comp ref="R1">
+    <comp ref="BOT_PAD1">
       <value>BATT0-</value>
       <footprint>KiCad_Footprints:ZF_BATT_AC10E_NEG</footprint>
+      <fields>
+        <field name="Mfr">TE Connectivity</field>
+        <field name="Mfr Part #">1447360-8</field>
+        <field name="Package">SMT</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43068F</tstamp>
     </comp>
-    <comp ref="R3">
+    <comp ref="BOT_PAD2">
       <value>BATT1+</value>
       <footprint>KiCad_Footprints:ZF_BATT_AC10E_POS</footprint>
+      <fields>
+        <field name="Package">ENIG pad</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43078A</tstamp>
     </comp>
     <comp ref="C1">
-      <value>C</value>
+      <value>0u1</value>
       <footprint>KiCad_Footprints:ZF_SMD_NonPol_0402_cap</footprint>
+      <fields>
+        <field name="Package">C0402</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A432063</tstamp>
@@ -124,135 +177,245 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A433B99</tstamp>
     </comp>
-    <comp ref="NA3">
-      <value>JMP_GND</value>
+    <comp ref="BOT_R2">
+      <value>JMP+JMP</value>
       <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A433F51</tstamp>
     </comp>
-    <comp ref="NA4">
-      <value>JMP_GND</value>
+    <comp ref="TOP_R2">
+      <value>JMP+JMP</value>
       <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43408A</tstamp>
     </comp>
-    <comp ref="D1">
-      <value>LED0</value>
+    <comp ref="BOT_D1">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A435F01</tstamp>
     </comp>
-    <comp ref="R6">
-      <value>LED1</value>
+    <comp ref="BOT_D2">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A4367FE</tstamp>
     </comp>
-    <comp ref="D2">
-      <value>LED1</value>
+    <comp ref="TOP_D2">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A436804</tstamp>
     </comp>
-    <comp ref="R7">
-      <value>LED2</value>
+    <comp ref="TOP_D3">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43765F</tstamp>
     </comp>
-    <comp ref="D3">
-      <value>LED2</value>
+    <comp ref="BOT_D3">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A437665</tstamp>
     </comp>
-    <comp ref="R8">
-      <value>LED3</value>
+    <comp ref="BOT_D4">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43766B</tstamp>
     </comp>
-    <comp ref="D4">
-      <value>LED3</value>
+    <comp ref="TOP_D4">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A437671</tstamp>
     </comp>
-    <comp ref="R9">
-      <value>LED4</value>
+    <comp ref="TOP_D5">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A437FF1</tstamp>
     </comp>
-    <comp ref="D5">
-      <value>LED4</value>
+    <comp ref="BOT_D5">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A437FF7</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>LED5</value>
+    <comp ref="BOT_D6">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A437FFD</tstamp>
     </comp>
-    <comp ref="D6">
-      <value>LED5</value>
+    <comp ref="TOP_D6">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A438003</tstamp>
     </comp>
-    <comp ref="R11">
-      <value>LED6</value>
+    <comp ref="TOP_D7">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A438FCC</tstamp>
     </comp>
-    <comp ref="D7">
-      <value>LED6</value>
+    <comp ref="BOT_D7">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A438FD2</tstamp>
     </comp>
-    <comp ref="R12">
-      <value>LED7</value>
+    <comp ref="BOT_D8">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood" part="Passive_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A438FD8</tstamp>
     </comp>
-    <comp ref="D8">
-      <value>LED7</value>
+    <comp ref="TOP_D8">
+      <value>22R+LED+22R</value>
       <footprint>KiCad_Footprints:ZF_SMD_0508_CORD</footprint>
+      <fields>
+        <field name="Package">R0508+LED0603+R0508</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428</field>
+        <field name="Subs Allowed">No</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="led-res_cordwood" part="LED-RES_cordwood"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A438FDE</tstamp>
     </comp>
-    <comp ref="NA2">
-      <value>SW_JMP</value>
+    <comp ref="TOP_R1">
+      <value>JMP+JMP</value>
       <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A43122D</tstamp>
     </comp>
-    <comp ref="NA1">
-      <value>SW_JMP</value>
+    <comp ref="BOT_R1">
+      <value>JMP+JMP</value>
       <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
       <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A432159</tstamp>
@@ -261,12 +424,112 @@
       <value>SW_PUSH</value>
       <footprint>KiCad_Footprints:ZF_SW_B3U</footprint>
       <fields>
+        <field name="Mfr">Omron Electronics</field>
+        <field name="Mfr Part #">B3U-3000P</field>
+        <field name="Package">SMT</field>
+        <field name="Link">https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-3000P/SW1022CT-ND/1534359</field>
         <field name="Subs Allowed">No</field>
         <field name="RoHS">Yes</field>
       </fields>
       <libsource lib="sw_push" part="SW_PUSH"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A4A7E66</tstamp>
+    </comp>
+    <comp ref="BOT_R6">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B06C812</tstamp>
+    </comp>
+    <comp ref="TOP_R6">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B07326E</tstamp>
+    </comp>
+    <comp ref="BOT_R5">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B073586</tstamp>
+    </comp>
+    <comp ref="TOP_R5">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B073614</tstamp>
+    </comp>
+    <comp ref="BOT_R4">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B07A226</tstamp>
+    </comp>
+    <comp ref="TOP_R4">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B07A2F2</tstamp>
+    </comp>
+    <comp ref="TOP_R3">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B07A38F</tstamp>
+    </comp>
+    <comp ref="BOT_R3">
+      <value>10M+10M</value>
+      <footprint>KiCad_Footprints:ZF_SMD_0805_CORD</footprint>
+      <fields>
+        <field name="Package">R0805+R0805</field>
+        <field name="Subs Allowed">Yes</field>
+        <field name="RoHS">Yes</field>
+      </fields>
+      <libsource lib="passive_cordwood_x2" part="Passive_cordwood_x2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B07A431</tstamp>
     </comp>
   </components>
   <libparts>
@@ -362,14 +625,11 @@
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
-    <library logical="sw_push">
-      <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/sw_push.lib</uri>
-    </library>
     <library logical="passive_cordwood_x2">
       <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/passive_cordwood_x2.lib</uri>
     </library>
-    <library logical="led-res_cordwood">
-      <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/led-res_cordwood.lib</uri>
+    <library logical="sw_push">
+      <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/sw_push.lib</uri>
     </library>
     <library logical="passive_cordwood">
       <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/passive_cordwood.lib</uri>
@@ -377,83 +637,102 @@
     <library logical="attiny85_qfn20_11-15">
       <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/attiny85_qfn20_11-15.lib</uri>
     </library>
+    <library logical="led-res_cordwood">
+      <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/led-res_cordwood.lib</uri>
+    </library>
     <library logical="attiny85_qfn20_1-5">
       <uri>/home/zach/Documents/cyborg_ring/HARDWARE/schematic_symbols/attiny85_qfn20_1-5.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(NA1-Pad1)">
-      <node ref="NA1" pin="1"/>
+    <net code="1" name="Net-(TOP_R4-Pad1)">
+      <node ref="TOP_R4" pin="1"/>
+    </net>
+    <net code="2" name="Net-(BOT_R4-Pad1)">
+      <node ref="BOT_R4" pin="1"/>
+    </net>
+    <net code="3" name="Net-(TOP_R3-Pad1)">
+      <node ref="TOP_R3" pin="1"/>
+    </net>
+    <net code="4" name="Net-(BOT_R3-Pad1)">
+      <node ref="BOT_R3" pin="1"/>
+    </net>
+    <net code="5" name="Net-(BOT_PAD1-Pad1)">
+      <node ref="BOT_PAD2" pin="1"/>
+      <node ref="BOT_PAD1" pin="1"/>
+    </net>
+    <net code="6" name="Net-(BOT_R1-Pad1)">
       <node ref="SW1" pin="2"/>
+      <node ref="BOT_R1" pin="1"/>
     </net>
-    <net code="2" name="Net-(NA3-Pad1)">
-      <node ref="NA3" pin="1"/>
-      <node ref="SW1" pin="1"/>
-      <node ref="TP7" pin="1"/>
+    <net code="7" name="/LED_TOP_0">
+      <node ref="TOP_D7" pin="1"/>
+      <node ref="TOP_R5" pin="1"/>
+      <node ref="TP2" pin="1"/>
+      <node ref="TOP_D1" pin="1"/>
+      <node ref="TOP_U1" pin="14"/>
+      <node ref="TOP_D2" pin="1"/>
+      <node ref="TOP_D8" pin="1"/>
     </net>
-    <net code="3" name="Net-(TP1-Pad1)">
-      <node ref="U1" pin="1"/>
+    <net code="8" name="Net-(BOT_U1-Pad1)">
       <node ref="TP1" pin="1"/>
-    </net>
-    <net code="4" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1"/>
-      <node ref="R3" pin="1"/>
-    </net>
-    <net code="5" name="/LED_BOTTOM_0">
-      <node ref="R6" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="D1" pin="1"/>
-      <node ref="D3" pin="1"/>
-      <node ref="R8" pin="1"/>
-    </net>
-    <net code="6" name="Net-(U1-Pad3)">
-      <node ref="U1" pin="3"/>
-    </net>
-    <net code="7" name="Net-(U1-Pad4)">
-      <node ref="U1" pin="4"/>
-    </net>
-    <net code="8" name="/LED_BOTTOM_1">
-      <node ref="D5" pin="1"/>
-      <node ref="R12" pin="1"/>
-      <node ref="D7" pin="1"/>
-      <node ref="U1" pin="5"/>
-      <node ref="R10" pin="1"/>
+      <node ref="BOT_U1" pin="1"/>
     </net>
     <net code="9" name="/LED_TOP_1">
+      <node ref="TOP_D5" pin="1"/>
       <node ref="TP4" pin="1"/>
-      <node ref="U2" pin="11"/>
-      <node ref="D6" pin="1"/>
-      <node ref="R7" pin="1"/>
-      <node ref="D4" pin="1"/>
-      <node ref="R9" pin="1"/>
+      <node ref="TOP_R6" pin="1"/>
+      <node ref="TOP_D3" pin="1"/>
+      <node ref="TOP_U1" pin="11"/>
+      <node ref="TOP_D4" pin="1"/>
+      <node ref="TOP_D6" pin="1"/>
     </net>
-    <net code="10" name="Net-(NA2-Pad1)">
-      <node ref="U2" pin="12"/>
-      <node ref="NA2" pin="1"/>
-      <node ref="TP3" pin="1"/>
+    <net code="10" name="Net-(BOT_R2-Pad1)">
+      <node ref="BOT_R2" pin="1"/>
+      <node ref="TP7" pin="1"/>
+      <node ref="SW1" pin="1"/>
     </net>
-    <net code="11" name="Net-(U2-Pad13)">
-      <node ref="U2" pin="13"/>
-    </net>
-    <net code="12" name="/LED_TOP_0">
-      <node ref="TP2" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="R11" pin="1"/>
-      <node ref="D8" pin="1"/>
-      <node ref="R5" pin="1"/>
-      <node ref="U2" pin="14"/>
-    </net>
-    <net code="13" name="VCC">
-      <node ref="C1" pin="1"/>
-      <node ref="U2" pin="15"/>
-      <node ref="R2" pin="1"/>
-      <node ref="TP5" pin="1"/>
-    </net>
-    <net code="14" name="GND">
-      <node ref="NA4" pin="1"/>
-      <node ref="C1" pin="2"/>
-      <node ref="R4" pin="1"/>
+    <net code="11" name="GND">
+      <node ref="TOP_R2" pin="1"/>
       <node ref="TP6" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="TOP_PAD2" pin="1"/>
+    </net>
+    <net code="12" name="/LED_BOTTOM_0">
+      <node ref="BOT_R5" pin="1"/>
+      <node ref="BOT_U1" pin="2"/>
+      <node ref="BOT_D4" pin="1"/>
+      <node ref="BOT_D3" pin="1"/>
+      <node ref="BOT_D2" pin="1"/>
+      <node ref="BOT_D1" pin="1"/>
+    </net>
+    <net code="13" name="Net-(BOT_U1-Pad3)">
+      <node ref="BOT_U1" pin="3"/>
+    </net>
+    <net code="14" name="Net-(BOT_U1-Pad4)">
+      <node ref="BOT_U1" pin="4"/>
+    </net>
+    <net code="15" name="/LED_BOTTOM_1">
+      <node ref="BOT_D8" pin="1"/>
+      <node ref="BOT_D7" pin="1"/>
+      <node ref="BOT_D5" pin="1"/>
+      <node ref="BOT_D6" pin="1"/>
+      <node ref="BOT_R6" pin="1"/>
+      <node ref="BOT_U1" pin="5"/>
+    </net>
+    <net code="16" name="Net-(TOP_U1-Pad13)">
+      <node ref="TOP_U1" pin="13"/>
+    </net>
+    <net code="17" name="Net-(TOP_R1-Pad1)">
+      <node ref="TOP_R1" pin="1"/>
+      <node ref="TP3" pin="1"/>
+      <node ref="TOP_U1" pin="12"/>
+    </net>
+    <net code="18" name="VCC">
+      <node ref="TOP_PAD1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="TOP_U1" pin="15"/>
+      <node ref="TP5" pin="1"/>
     </net>
   </nets>
 </export>

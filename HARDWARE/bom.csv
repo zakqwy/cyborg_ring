@@ -1,31 +1,15 @@
-Ref,Qty,Value,Size,Link (for stuff that can't be substituted),Notes
-C1 ,1,100n,C0402,,you can probably use 47n or 220n if the Great Capacitor Shortage of 2018 prevents you from buying the linked part
-NA3 NA4 ,1,JMP + JMP,R0805 + R0805,,End-to-end stack of two 0805 jumpers. 
-NA2 NA1 ,1,JMP + JMP,R0805 + R0805,,End-to-end stack of two 0805 jumpers. 
-R5 D1 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R2 ,1,BATT0+,pad,,"leave blank. Hole is for battery venting, don't plug!"
-R4 ,1,BATT1-,SMT spring finger,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,solder on after ring assembly and bend as needed to hold battery in place.
-R1 ,1,BATT0-,SMT spring finger,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,solder on after ring assembly and bend as needed to hold battery in place.
-R3 ,1,BATT1+,pad,,"leave blank. Hole is for battery venting, don't plug!"
-R6 D2 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R7 D3 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R8 D4 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R9 D5 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R10 D6 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R11 D7 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-R12 D8 ,1,22R + 2V LED + 22R,R0508 + L0603 + R0508,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,"End-to-end stack of an 0508 resistor, an 0603 LED, and another 0508 resistor. Don't use fancy InGaN LEDs as the batteries are only 1.4V nominal each. 560 nm to 650 nm is fine."
-SW1 ,1,SW_PUSH,SMT,https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-3000P/SW1022CT-ND/1534359,Probably not possible to substitute another part unless you can match the footprint.
-TP2 ,1,SCK,pad,,programming pad
-TP3 ,1,MISO,pad,,programming pad
-TP4 ,1,MOSI,pad,,programming pad
-TP5 ,1,VCC,pad,,programming pad
-TP6 TP7 ,1,GND,pad,,programming pad
-TP1 ,1,RESET,pad,,programming pad
-U1 ,1,ATtiny85_QFN20_1-5,QFN20-0.5,https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367,Note the pin 1 location.
-U2 ,1,ATtiny85_QFN20_11-15,QFN20-0.5,https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367,Note the pin 1 location.
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-BOM made with KICAD_BOM_WIZARD (https://github.com/HashDefineElectronics/KiCad_BOM_Wizard.git),,,,,
-Generated Thu 17 May 2018 02:45:49 PM CDT,,,,,
+Ref,Qty,Value,Link,Mfr,Mfr Part #,Package,RoHS,Subs Allowed
+BOT_PAD1 TOP_PAD2 ,2,BATT0- BATT1-,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,TE Connectivity,1447360-8,SMT,Yes,No
+BOT_R2 TOP_R2 TOP_R1 BOT_R1 ,2,JMP+JMP, , , ,R0805+R0805,Yes,Yes
+BOT_R6 TOP_R6 BOT_R5 TOP_R5 BOT_R4 TOP_R4 TOP_R3 BOT_R3 ,4,10M+10M, , , ,R0805+R0805,Yes,Yes
+BOT_U1 TOP_U1,1,ATtiny85_QFN20_1-5,https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367,Atmel/Microchip,ATTINY85-20MUR ,QFN20-0.5,Yes,No
+C1 ,1,0u1, , , ,C0402,Yes,Yes
+SW1 ,1,SW_PUSH,https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-3000P/SW1022CT-ND/1534359,Omron Electronics,B3U-3000P,SMT,Yes,No
+TOP_D1 BOT_D1 BOT_D2 TOP_D2 TOP_D3 BOT_D3 BOT_D4 TOP_D4 TOP_D5 BOT_D5 BOT_D6 TOP_D6 TOP_D7 BOT_D7 BOT_D8 TOP_D8 ,8,22R+LED+22R,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428, , ,R0508+LED0603+R0508,Yes,No
+TOP_PAD2 ,1,BATT1-,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,TE Connectivity,1447360-8,SMT,Yes,No
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+BOM made with KICAD_BOM_WIZARD (https://github.com/HashDefineElectronics/KiCad_BOM_Wizard.git),,,,,,,,
+Generated Thu 24 May 2018 09:12:32 AM CDT,,,,,,,,
