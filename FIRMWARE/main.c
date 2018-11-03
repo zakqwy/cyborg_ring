@@ -7,6 +7,7 @@ volatile uint8_t tick = 0;
 uint8_t direction = 1; //1 = pos, 0 = neg
 uint8_t count = 0;
 uint8_t count_reset = 3;
+uint8_t currentLED = 0;
 
 ISR(TIM0_COMPA_vect) {
 	tick = 1;
