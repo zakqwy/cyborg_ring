@@ -13,7 +13,7 @@ The ring works and seems to last at least a few weeks without breaking; having s
 ## build instructions
 I did a live stream in October 2018 that shows a complete ring build start-to-finish. You can view an unedited recording of the stream [here](https://youtu.be/spNg8LhxJz0). I also made a brief video that just goes over the tools and materials, available [here](https://youtu.be/D9dDy7vboAA). These are both great starting points if you are new to the project.
 ### step zero: prepare thyself
-This is a fun and challenging project. Building a ring can be quite frustrating, especially if you aren't used to working with tiny parts, but if you take your time it is eminently possible even if you are fairly new to soldering. Make sure you are comfortable, not overly caffeinated (as shaky hands make it quite tough), and try to avoid interruptions for the next few hours. Remember that you have extra parts, and even if you damage a PCB the replacements are quite cheap (although they may take a week or two to arrive in the mail).
+This is a fun and challenging project. Building a ring can be frustrating, especially if you aren't used to working with tiny parts, but if you take your time it is eminently possible even if you are fairly new to soldering. Make sure you are comfortable, not overly caffeinated (as shaky hands make it quite tough), and try to avoid interruptions for the next few hours. Remember that you have extra parts, and even if you damage a PCB the replacements are quite cheap (although they may take a week or two to arrive in the mail).
 ### step one: source PCBs
 Use a service like [OSHpark](https://oshpark.com/shared_projects/sZ3MaKA4) (or any other high-quality PCB vendor) to fabricate the boards. They should be routed with mousebites, 0.8mm (1/32") FR4, ENIG, double-sided. Note that some traces are a bit close to the PCB edge so you may need to try a few services or have your bodge wires handy:
 ![cyborg ring pcb panel](/img/cyborg_ring_pcb_panel.jpg)
@@ -65,16 +65,50 @@ Solder the battery tabs to the smaller of the round pads on the left side of eac
 ![cyborg ring battery tab](/img/cyborg_ring_battery_tab.jpg)
 
 ### step five: join the two ring halves
-This is the most challenging part of the ring construction. The components are all in a delicate state (especially the brittle resistor columns), and the two halves need to be aligned within around 100 microns to ensure the QFN pads all land properly. I demonstrated this step on stage at the 2018 Supercon; [the video](https://www.youtube.com/watch?v=hiBTvdMfvWo) isn't great but hopefully the methodology comes through.
+This is the most challenging part of the ring construction. The components are all in a delicate state (especially the brittle resistor columns), and the two halves need to be aligned within around 100 microns to ensure the QFN pads all land properly. I demonstrated this step on stage at the 2018 Supercon; [the video](https://www.youtube.com/watch?v=hiBTvdMfvWo) isn't great but hopefully the methodology comes through. I still need to pull together good images showing this part in action, but it's tough to photograph as both hands tend to be busy.
 
-I still need to pull together good images showing this part in action, but it's tough to image as both hands tend to be busy. 
+Pick up the bottom ring half (the part with most of the components) with your thumb and forefinger. Place the top ring half over the bottom half, gently squeezing the two PCBs together between your fingers. Adjust your grip so that the two boards are aligned, and ensure that there is some pressure holding them together; any gaps between the components and the PCB will be difficult to fix with solder. As you hold the PCB, notice how much fine control you have over component alignment by sliding your thumb and forefinger relative to each other. Practice getting the QFN pads perfectly in line and holding them that way for a few seconds. Keep an eye on the alignment of the two furthest structural columns; if all three of these joints are in line, the other resistors will fall into place as well.
 
-- Head over to the Hackaday.io projects site and navigate to the build project log, available [here](https://hackaday.io/project/34160-cyborg-ring/log/84158-assembly-breakage-next-rev-plans). These instructions aren't comprehensive and don't cover the latest version (different clips, reinforcement wires, etc) but they should give you a general idea of techniques and tools.
-- Add the 'undocumented' connections: tack a 30 AWG bare wire to the ATtiny's ground pad and route it to an available ground pad (one of the resistor jumper stacks works for this). Then take eight lengths of this wire and solder it thru-hole-style to the eight tiny holes on each board. Trim the wires and admire the excellent reinforcements you have installed.
+When you are comfortable with your grip on the PCBs, add a blob of flux to the five unsoldered QFN pads, tin your iron, check alignment one final time, and swipe the iron tip across the pads to flow solder into the joint. Be sure to hold the boards steady during this process; don't let go until the iron has been off the joint for a few seconds, as you must ensure the solder is completely cool or you'll get a cold joint.
+
+As soon as the solder on the QFN joint solidifies, start treating the ring with even greater care. The five pads holding the top PCB are tiny and easily ripped off. Without putting the ring down, add gel flux to the six structural resistor columns, re-tin your iron tip, and touch the six pads in sequence to flow solder into the joints. Now you can put the ring down and inspect your work; the ring is still too delicate to wear (which we will address next), but it shouldn't spontaneously disassemble if left on the workbench until the next morning.
+### step six: install reinforcing wires
+The major design update between the two hardware revisions to date added eight tension wires. The original ring was incredibly weak in tension or shear, as the resistors would easily lose their solder caps. Think of the columns as un-reinforced concrete: they're pretty decent in compression, but need a bit of help for real-world applications.
+
+Each ring PCB has eight tiny plated holes designed for stripped 30 AWG wire wrap wire. The clearance is tight, so inserting the wire through both holes can be a trial-and-error process. Generally, if you kink or bend the wire in an attempt, you are better off clipping the wire back until you have a fresh straight section to work with. Some of the holes are marked here:
 ![cyborg ring programming diagram](/img/cyborg_ring_programming_diagram.png)
-- Program the ATTiny85 (or -45, or -25) using the six pads shown above and a suitable AVR programmer, such as the USBtinyISP from Adafruit. The code in the FIRMWARE directory keeps the microcontroller sleeping until the switch is pressed, at which point the LEDs flash three times.
-- If desired, coat all the exposed bits (other than battery terminals and switch) with silicone modified conformal coating. The board won't be waterproof but this will at least help protect stuff a bit.
-- Show me your builds, either via the Hackaday site or by tweet (@zakqwy). I'd love to see some cyborg rings in the wild.
+
+One at a time, blob flux onto the wire and holes and apply solder as you did with the other components. As you secure each joint, clip the wires flush. If the clipped wire is sharp, dab it with a tinned iron to add a tiny bit of additional solder to round off the joint.
+
+Now you can wear the ring. But you will probably want to install the rest of the components first, as it's quite a bit more interesting to see when the LEDs work.
+
+### step seven: install the LEDs
+The LEDs straddle the gap between the 0508 resistors at the top of each ring PCB. This works because the resistors are 1.2 mm wide each, and 0603 LEDs are 1.6 mm wide. 1.2 + 1.6 + 1.2 = 4, and it means the LEDs are nicely centered. However, they are quite delicate and dependent on nominal tolerances, so they don't always fit quite right, and can easily break if you throw an unprotected ring in your backpack for a month (as I did on the broken-but-re-LED-able ring shown on the right here):
+![cyborg ring pair](/img/cyborg_ring_pair.jpg)
+
+LED polarity should always be confirmed on the LED datasheet, but in most cases the cathode (negative) terminal of a component can be identified by the black dot visible through the epoxy package. Install the LEDs according to this diagram:
+![cyborg ring leds](/img/cyborg_ring_leds.png)
+
+Don't worry if you get all of them backwards. The LEDs are Charlieplexed, so they will still light up but will be in a funky order. You can fix them, or you can fix the code. Just make sure the polarities alternate from one to the next.
+
+Secure the ring upright. To install the LEDs, dab a bit of gel flux on the free pads of the 0508 resistors and the LED terminals. Hold each LED in sequence in its appropriate place and touch your tinned iron to the terminal to flow solder into the joint. This may take a bit of practice and rework, so take your time. Be sure to solder both sides of each LED before you move on to the next.
+### step eight: final components
+The ring has two components that must be soldered in traditional fashion to the PCBs. The 0402 bypass capacitor should be soldered to the top PCB, while the side-mounted switch should be soldered to the bottom PCB. The switch pads aren't terribly generous, so a good strategy is to tin the pads and switch terminals, deflux the whole ring with isopropyl alcohol (as the switch isn't sealed), and secure the switch by reflowing the pads from above.
+### step nine: programming
+The ring firmware (/FIRMWARE) runs on an ATtiny85 microcontroller, but can easily work with a -25 or -45 as well (these devices simply have less flash memory, not a problem for our tiny program). If you use an ATtiny25 or ATtiny45, be sure to change the DEVICE line of the Makefile as required.
+
+You can program the ring with any suitable AVR programmer: a USBtinyISP, an Arduino, or one of Atmel's many official devices. Using these specific devices is outside the scope of these instructions; a good starting point is Adafruit's fantastic guide for their USBtinyISP, available [here](https://learn.adafruit.com/usbtinyisp). Connect your programmer of choice to the following pads on the ring:
+![cyborg ring programming diagram](/img/cyborg_ring_programming_diagram.png)
+
+The pads are 0.1" spaced so you _can_ build a clever pinchy programmer rig out of perfboard and pogo pins, like this:
+![cyborg ring programmer](/img/cyborg_ring_programmer.jpg)
+
+The programming rig works well enough, but it's fussy to get aligned so I usually just tack wires onto the pads. The current firmware zips the LEDs sequentially three times, then puts the microcontroller to sleep. Battery life should be in the 6-8 weeks range and is probably chemistry-limited rather than related to current draw (unless you play with the ring _constantly_)
+
+Optionally, you can now coat the exposed parts of the ring with silicone modified conformal coating. The ring won't be waterproof, but it will be a bit better protected.
+
 ![cyborg ring gif](/img/cyborg_ring.gif)
 ## known builds
-- [F0cks' build](https://blog.f0cks.net/projects/Cyborg-ring/), remixed to ring size 6.5-7 in Eagle and used for a proposal!
+Building a cyborg ring and willing to share your process? Send me a link and I'll add it here!
+
+[F0cks' build](https://blog.f0cks.net/projects/Cyborg-ring/), remixed to ring size 6.5-7 in Eagle and used for a proposal!
