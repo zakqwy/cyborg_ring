@@ -1,12 +1,12 @@
-Ref,Qty,Value,Link,Mfr,Mfr Part #,Package,RoHS,Subs Allowed
-BOT_PAD1 TOP_PAD2 ,2,BATT0- BATT1-,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,TE Connectivity,1447360-8,SMT,Yes,No
-BOT_R2 TOP_R2 TOP_R1 BOT_R1 ,2,JMP+JMP, , , ,R0805+R0805,Yes,Yes
-BOT_R6 TOP_R6 BOT_R5 TOP_R5 BOT_R4 TOP_R4 TOP_R3 BOT_R3 ,4,10M+10M, , , ,R0805+R0805,Yes,Yes
-BOT_U1 TOP_U1,1,ATtiny85_QFN20_1-5,https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367,Atmel/Microchip,ATTINY85-20MUR ,QFN20-0.5,Yes,No
-C1 ,1,0u1, , , ,C0402,Yes,Yes
-SW1 ,1,SW_PUSH,https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-3000P/SW1022CT-ND/1534359,Omron Electronics,B3U-3000P,SMT,Yes,No
-TOP_D1 BOT_D1 BOT_D2 TOP_D2 TOP_D3 BOT_D3 BOT_D4 TOP_D4 TOP_D5 BOT_D5 BOT_D6 TOP_D6 TOP_D7 BOT_D7 BOT_D8 TOP_D8 ,8,22R+LED+22R,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428, , ,R0508+LED0603+R0508,Yes,No
-TOP_PAD2 ,1,BATT1-,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,TE Connectivity,1447360-8,SMT,Yes,No
+Part Name (REF),Qty,Value,Link,Mfr,Mfr Part #,Package,RoHS,Subs Allowed
+Battery spring contacts (BOT_PAD1 TOP_PAD2 ),2,BATT0- BATT1-,https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/1447360-8/A108284CT-ND/4022011,TE Connectivity,1447360-8,SMT,Yes,No
+"Jumper columns, 0805x2 (BOT_R2 TOP_R2 TOP_R1 BOT_R1)",4,JMP,any, , ,R0805+R0805,Yes,Yes
+"Structural columns, 0805x2 (BOT_R6 TOP_R6 BOT_R5 TOP_R5 BOT_R4 TOP_R4 TOP_R3 BOT_R3)",8,10M,any, , ,R0805+R0805,Yes,Yes
+Microcontroller (BOT_U1 TOP_U1),1,ATtiny85_QFN20_1-5,https://www.digikey.com/product-detail/en/microchip-technology/ATTINY85-20MUR/ATTINY85-20MURCT-ND/2774367,Atmel/Microchip,ATTINY85-20MUR ,QFN20-0.5,Yes,No
+Bypass capacitor (C1),1,0u1,any, , ,C0402,Yes,Yes
+"Pushbutton switch, side-mounted, tiny (SW1)",1,SW_PUSH,https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/B3U-3000P/SW1022CT-ND/1534359,Omron Electronics,B3U-3000P,SMT,Yes,No
+"LEDs, 0603, 2 V drop, 650 – 565 nm (TOP_D1 BOT_D1 BOT_D2 TOP_D2 TOP_D3 BOT_D3 BOT_D4 TOP_D4 TOP_D5 BOT_D5 BOT_D6 TOP_D6 TOP_D7 BOT_D7 BOT_D8 TOP_D8)",8,LED,any, , ,LED0603,Yes,Yes
+"Resistors for LEDs, 0508",16,22R ,https://www.digikey.com/product-detail/en/rohm-semiconductor/LTR10EZPF22R0/RHM1211CT-ND/4055428,Rohm Semiconductor,LTR10EZPF22R0 ,R0508,Yes,No
 ,,,,,,,,
 ,,,,,,,,
 ,,,,,,,,
