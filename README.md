@@ -92,8 +92,13 @@ LED polarity should always be confirmed on the LED datasheet, but in most cases 
 Don't worry if you get all of them backwards. The LEDs are Charlieplexed, so they will still light up but will be in a funky order. You can fix them, or you can fix the code. Just make sure the polarities alternate from one to the next.
 
 Secure the ring upright. To install the LEDs, dab a bit of gel flux on the free pads of the 0508 resistors and the LED terminals. Hold each LED in sequence in its appropriate place and touch your tinned iron to the terminal to flow solder into the joint. This may take a bit of practice and rework, so take your time. Be sure to solder both sides of each LED before you move on to the next.
-### step eight: final components
+### step eight: final components and ground jumper
 The ring has two components that must be soldered in traditional fashion to the PCBs. The 0402 bypass capacitor should be soldered to the top PCB, while the side-mounted switch should be soldered to the bottom PCB. The switch pads aren't terribly generous, so a good strategy is to tin the pads and switch terminals, deflux the whole ring with isopropyl alcohol (as the switch isn't sealed), and secure the switch by reflowing the pads from above.
+
+Remember how the QFN ATtiny85 (/45/25) is great for cordwood because all of the pins are broken out on two sides of the QFN? Well .. not _quite_ all of the pins. You have to jumper in the ground connection. To do this, blob some flux onto the ground pad on the back of the chip and touch it with a tinned iron to flow on some solder. Then, tack a fluxed length of wire wrap wire onto the blob, being careful to avoid shorting the wire against any pins. Solder the other end of the wire to the resistor jumper column _opposite_ the ATtiny's Pin 1 indicator, as shown here:
+![cyborg ring jummper](/img/cyborg_ring_jumper.png)
+
+You can also use the position of the switch as a guide, following the image above.
 ### step nine: programming
 The ring firmware (/FIRMWARE) runs on an ATtiny85 microcontroller, but can easily work with a -25 or -45 as well (these devices simply have less flash memory, not a problem for our tiny program). If you use an ATtiny25 or ATtiny45, be sure to change the DEVICE line of the Makefile as required.
 
@@ -108,7 +113,15 @@ The programming rig works well enough, but it's fussy to get aligned so I usuall
 Optionally, you can now coat the exposed parts of the ring with silicone modified conformal coating. The ring won't be waterproof, but it will be a bit better protected.
 
 ![cyborg ring gif](/img/cyborg_ring.gif)
+### step ten: what to do if your ring doesn't work
+I have built five of these rings as of November 2018, and I had to perform at least some rework on three of them before they would accept a program. So don't fret if you get an avrdude error! A few recommended troubleshooting steps:
+* Double-check the programming connections against the diagram shown in step 9. While you're at it, make sure your programmer is connected and working (and providing power, if you haven't installed batteries yet)!
+* Make sure the ATtiny is oriented correctly vs the pin 1 indicator. Seriously, I messed this up _several times_ but was able to recover using hot air in all cases.
+* Re-examine the QFN solder joints with a loupe. If the chip is lifted or misaligned at all, one or more of the fillets may not contact the pads and it's really tough to see without 10x or better magnification. If you see some suspect solder joints, clean them with a bit of isopropyl alcohol, add flux, and gently sweep them with a lightly tinned iron tip.
+* Make sure you didn't swap the resistor columns! The two on either side of the ATtiny should be jumpers, while the other four should be 10M + 10M.
+
+Finally, please don't hesitate to get in touch if you want a second set of eyes on your work. The best route to contact me for help with your build is via [Twitter](https://twitter.com/zakqwy). If you aren't on that platform, you can also submit a GitHub Issue. Make sure to include close-up pictures!
 ## known builds
-Building a cyborg ring and willing to share your process? Send me a link and I'll add it here!
+Building a cyborg ring and willing to share your process? Send me a link and I'll add it here.
 
 [F0cks' build](https://blog.f0cks.net/projects/Cyborg-ring/), remixed to ring size 6.5-7 in Eagle and used for a proposal!

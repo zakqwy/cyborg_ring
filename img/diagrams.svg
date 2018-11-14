@@ -134,9 +134,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.46502525"
      inkscape:cx="491.68864"
-     inkscape:cy="513.03363"
+     inkscape:cy="599.05046"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-text-baseline="false"
      inkscape:window-width="1366"
@@ -274,9 +274,10 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="leds">
+     inkscape:label="leds"
+     style="display:none">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1.99999998, 1.99999997999999990;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1.99999998, 1.99999998;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1057"
        width="158.74141"
        height="267.98276"
